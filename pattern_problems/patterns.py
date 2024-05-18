@@ -33,7 +33,8 @@ def pattern2():
 
 # pattern2()
 
-# pattern3
+# pattern3 : Loop to print the number in right-angled triangle
+
 def pattern3():
     n = int(input("enter the number of loops : "))
     for i in range(1, n+1):
@@ -43,7 +44,7 @@ def pattern3():
 
 # pattern3()
 
-# pattern4
+# pattern4 : Loop to print the number in right-angled triangle
 def pattern4():
     n = int(input("enter the number of loops : "))
     for i in range(1, n+1):
@@ -53,3 +54,12 @@ def pattern4():
 
 # pattern4()
 
+# pattern5: Loop to print inverted right-angled triangle of stars
+def pattern5():
+    n = int(input("enter the number of loops : "))
+    for i in range(n, 0, -1):
+        for j in range(i):
+            print('*', end=' ')
+        print()
+
+# pattern5()
