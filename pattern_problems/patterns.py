@@ -1,4 +1,4 @@
-
+# pattern1:
 def pattern1():
     n = int(input("enter the number of loops : "))
     for i in range(n):
@@ -7,6 +7,13 @@ def pattern1():
         print()
 
 # pattern1()
+
+# # Number of rows and columns
+# n = 5
+
+# # Loop to print square star pattern
+# for i in range(n):
+#     print('* ' * n)
 
 # # Pattern2
 # # Number of rows
@@ -35,3 +42,14 @@ def pattern3():
         print()
 
 # pattern3()
+
+# pattern4
+def pattern4():
+    n = int(input("enter the number of loops : "))
+    for i in range(1, n+1):
+        for j in range(1,i+1):
+            print (i, end=" ")
+        print()   
+
+# pattern4()
+
