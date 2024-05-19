@@ -38,7 +38,7 @@ def pattern2():
 def pattern3():
     n = int(input("enter the number of loops : "))
     for i in range(1, n+1):
-        for j in range(1,i+1):
+        for j in range(1,i+1): 
             print (j, end=" ")
         print()
 
@@ -63,3 +63,38 @@ def pattern5():
         print()
 
 # pattern5()
+
+# pattern6: Loop to print inverted right-angled triangle of numbers:
+def pattern6():
+    n = int(input("enter the number of loops : "))
+    for i in range(n,0,-1):
+        for j in range(1,i+1):
+            print(j, end=" ")
+        print()
+
+# pattern6()
+
+# pattern 7 : pyramid of stars
+def pattern7():
+    n = int(input("enter the number of loops : "))
+    for i in range(0,n):
+        for j in range(0,n-i-1):
+            print(" ", end="")
+        for j in range(0,2*i+1):
+            print("*",end="")
+        print()
+
+# pattern7()
+
+# pattern8 : equilateral triangle - stars
+def pattern8():
+    n = int(input("enter the number of loops : "))
+    for i in range(0,2*n-1):
+        stars = i+1
+        if i >= n:
+            stars = 2*n-i-1
+        for j in range(0, stars):
+            print("*", end="")
+        print()
+
+pattern8()
