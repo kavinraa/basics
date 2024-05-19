@@ -97,4 +97,4 @@ def pattern8():
             print("*", end="")
         print()
 
-pattern8()
+# pattern8()
