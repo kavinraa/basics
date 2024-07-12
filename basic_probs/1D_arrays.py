@@ -70,14 +70,14 @@
 # running sum of 1-D array
 
 def running_sum(nums):
-    length = len(nums)
+    ans = []
     sum = 0
-    for i in range(length):
-        sum += nums[i]
-        nums[i] = sum
-    return nums
+    for num in nums:
+        sum += num
+        ans.append(sum)
+    return ans
 
-nums = [1, 2, 3, 4]
+nums = [5, 2, 6, 4]
 result = running_sum(nums)
 
 print("Input array:", nums)
