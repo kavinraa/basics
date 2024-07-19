@@ -85,3 +85,32 @@
     
 # ------------------------------------------------------------------------------
 
+# # Shuffle the array :
+# def shuffle(nums, n):
+#     # Initialize an empty list for the result
+#     result = []
+
+#     # Loop through the first half and the second half of the array
+#     for i in range(n):
+#         # Append the element from the first half
+#         result.append(nums[i])
+#         # Append the corresponding element from the second half
+#         result.append(nums[n + i])
+
+#     return result
+
+# # Example usage
+# nums = [2, 5, 1, 3, 4, 7]
+# n = 3
+# shuffled_array = shuffle(nums, n)
+
+# print("Input array:", nums)
+# print("Shuffled array:", shuffled_array)
+
+# ------------------------------------------------------------------------------
+
+
+
+
+
+
