@@ -67,19 +67,21 @@
 
 # ------------------------------------------------------------------------------
 
-# running sum of 1-D array
+# # running sum of 1-D array
 
-def running_sum(nums):
-    ans = []
-    sum = 0
-    for num in nums:
-        sum += num
-        ans.append(sum)
-    return ans
+# def running_sum(nums):
+#     ans = []
+#     sum = 0
+#     for num in nums:
+#         sum += num
+#         ans.append(sum)
+#     return ans
 
-nums = [5, 2, 6, 4]
-result = running_sum(nums)
+# nums = [5, 2, 6, 4]
+# result = running_sum(nums)
 
-print("Input array:", nums)
-print("Running sum array:", result)
+# print("Input array:", nums)
+# print("Running sum array:", result)
     
+# ------------------------------------------------------------------------------
+
