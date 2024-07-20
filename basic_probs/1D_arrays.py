@@ -29,41 +29,41 @@
 
 # ------------------------------------------------------------------------------
 
-# # # Array basics 3:
-# # Using the array Module
-# import array as arr
+# Array basics 3:
+# Using the array Module
+import array as arr
 
-# # Prompt the user for the size of the array
-# n = int(input("Enter the number of elements: "))
+# Prompt the user for the size of the array
+n = int(input("Enter the number of elements: "))
 
-# # Initialize an empty array of integers
-# array = arr.array('i', [])
+# Initialize an empty array of integers
+array = arr.array('i', [])
 
-# # Loop to collect inputs
-# for i in range(n):
-#     element = int(input(f"Enter element {i + 1}: "))
-#     array.append(element)
+# Loop to collect inputs
+for i in range(n):
+    element = int(input(f"Enter element {i + 1}: "))
+    array.append(element)
 
-# # Print the resulting array
-# print("Array:", array)
+# Print the resulting array
+print("Array:", array)
 
 # ------------------------------------------------------------------------------
 
 # # build arrays from permutation :
 
-# def arr(nums):
-#     length = len(nums)
-#     arr_test = []
-#     for i in range(length):
-#         arr_test.append(nums[nums[i]])
-#     return arr
+def arr(nums):
+    length = len(nums)
+    arr_test = []
+    for i in range(length):
+        arr_test.append(nums[nums[i]])
+    return arr
 
-# nums=[2,0,3,1]
+nums=[2,0,3,1]
 # perm = arr(nums)
 
 
-# print("Input array:", nums)
-# print("Permutation array:", perm)
+print("Input array:", nums)
+print("Permutation array:", perm)
 
 # ------------------------------------------------------------------------------
 
