@@ -102,7 +102,7 @@ def shuffle(nums, n):
 # Example usage
 nums = [2, 5, 1, 3, 4, 7]
 n = 3
-shuffled_array = shuffle(nums, n)
+# shuffled_array = shuffle(nums, n)
 
 print("Input array:", nums)
 print("Shuffled array:", shuffled_array)
