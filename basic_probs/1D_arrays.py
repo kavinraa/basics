@@ -85,7 +85,7 @@ print("Permutation array:", perm)
     
 # ------------------------------------------------------------------------------
 
-# # Shuffle the array :
+# Shuffle the array :
 def shuffle(nums, n):
     # Initialize an empty list for the result
     result = []
@@ -105,7 +105,7 @@ n = 3
 # shuffled_array = shuffle(nums, n)
 
 print("Input array:", nums)
-print("Shuffled array:", shuffled_array)
+print("Shuffled array:", shuffled_array)    
 
 # ------------------------------------------------------------------------------
 
