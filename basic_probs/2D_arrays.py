@@ -93,3 +93,77 @@
 # print("Cells with odd values:", odd_cells)
 
 # ---------------------------------------------------------------------------------------------
+# Odd cells with indices : solution using row increments
+
+# def oddCells(m, n, indices):
+#     # create row and column increment
+#     row_inc = [0]*m
+#     col_inc = [0]*n
+
+#     # apply the increment for each index
+#     for r,c in indices:
+#         row_inc[r] += 1
+#         col_inc[c] += 1
+
+#     # count the cells with odd values
+#     odd_count = 0
+#     odd_cells = []
+#     for i in range(m):
+#         for j in range(n):
+#             # A cell (i, j) has an odd value if the sum of row and column increments is odd
+#             if (row_inc[i] +col_inc[j]) % 2 == 1:
+#                 odd_count += 1
+#                 odd_cells.append((i,j))
+#     print(f'The odd cells are : ', odd_cells)
+#     return odd_count
+
+# m = 2
+# n = 3
+# indices = [[0, 1], [1, 1]]
+# result = oddCells(m, n, indices)
+# print(f"Sum of cells with odd values:", result)  # Output: 6
+
+# ---------------------------------------------------------------------------------------------
+
+# Odd cells with indices : solution by directly modifying the matrix
+
+# def oddCells(m, n, indices):
+#     length = len(indices)
+
+#     # Initialize a matrix of size m x n with all values set to 0
+#     mat = [[0] * n for _ in range(m)]
+
+#     # Apply the increments for each index in indices
+#     for i in range(length):
+#         row = indices[i][0]
+
+#         # Increment all values in the row 'row' by 1
+#         for k in range(n):  # Use 'n' because you want to increment across columns
+#             mat[row][k] += 1
+
+#         col = indices[i][1]
+
+#         # Increment all values in the column 'col' by 1
+#         for k in range(m):  # Use 'm' because you want to increment across rows
+#             mat[k][col] += 1
+
+#     # Count the number of cells with odd values
+#     ans = 0
+#     for i in range(m):
+#         for j in range(n):
+#             if mat[i][j] % 2 == 1:
+#                 ans += 1
+
+#     return ans  # Make sure to return the final answer
+
+# # Example usage
+# m = 2
+# n = 3
+# indices = [[0, 1], [1, 1]]
+# result = oddCells(m, n, indices)
+# print(f"Sum of cells with odd values: {result}")  # Output: 6
+
+# ---------------------------------------------------------------------------------------------
+
+
+
