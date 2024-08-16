@@ -19,11 +19,11 @@
 # ---------------------------------------------------------------------------------------------
 
 # def flipAndInvertImage(image):
-#     # iterate through each rpw in the input matrix
+#     # iterate through each row in the input matrix
 #     for row in image:
 #         # flip the row horizontally by reversing it
 #         row.reverse()
-#         # invert the row 
+#         # invert the row : 1 -> 0 ; 0 -> 1
 #         for i in range(len(row)):
 #             row[i] = 1 - row[i]
 #     return image
@@ -68,29 +68,6 @@
 # ]
 
 # print(diagonalSum(matrix)) 
-
-# ---------------------------------------------------------------------------------------------
-
-# def find_odd_cells(matrix):
-#     odd_cells = []
-
-#     # Iterate over the rows and columns of the matrix
-#     for i in range(len(matrix)):
-#         for j in range(len(matrix[i])):
-#             if matrix[i][j] % 2 != 0:
-#                 odd_cells.append((i, j))
-    
-#     return odd_cells
-
-# # Example usage
-# matrix = [
-#     [1, 2, 3],
-#     [4, 5, 6],
-#     [7, 8, 9]
-# ]
-
-# odd_cells = find_odd_cells(matrix)
-# print("Cells with odd values:", odd_cells)
 
 # ---------------------------------------------------------------------------------------------
 # Odd cells with indices : solution using row increments
@@ -165,5 +142,57 @@
 
 # ---------------------------------------------------------------------------------------------
 
+# # transpose of a matrix : method 1
+# def transpose(matrix):
+#     # get the length of row and column of original matrix
+#     row = len(matrix)
+#     col = len(matrix[0])
+
+#     # initialize a zero transpose matrix with col as rows & rows as col -> (col*row)
+#     transpose_matrix = [[0]* col for _ in range(row) ]
+
+#     # fill the tranpose matrix by swapping rows and cols
+#     for i in range(row):
+#         for j in range(col):
+#             transpose_matrix [j][i] = matrix[i][j]
+    
+#     return transpose_matrix
 
 
+# # Example usage
+# matrix = [
+#     [1, 2, 3],
+#     [4, 5, 6],
+#     [7, 8, 9]
+# ]
+
+# transposed = transpose(matrix)
+
+# print("original matrix : ")
+# for row in matrix:
+#     print(row)
+
+# print("\ntransposed matrix :")
+# for row in transposed:
+#     print(row)
+
+# ---------------------------------------------------------------------------------------------
+
+# # transpose of a matrix : method 2
+# def transpose(matrix):
+#     trans_mat = zip(*matrix)
+#     return trans_mat
+
+# matrix = [
+#     [1, 2, 3],
+#     [4, 5, 6],
+#     [7, 8, 9]
+# ]
+
+# transposed = transpose(matrix)
+
+# print("transpose_matrix : ")
+# for row in transposed:
+#     print(row)
+
+# ---------------------------------------------------------------------------------------------
