@@ -64,18 +64,29 @@
 
 # ----------------------------------------------------------------------------------------------
 
-def power(x,n):
-    # initialise power == 1
-    pow = 1
-    # multiply x for n times
-    for _ in range(n):
-        pow *= x
-    return pow
+# def power(x,n):
+#     # initialise power = 1
+#     pow = 1
+#     # multiply x for n times
+#     for _ in range(n):
+#         pow *= x
+#     return pow
 
-x = 2
-n = 3
+# x = 2
+# n = 3
 
-print(power(x,n))
+# print(power(x,n))
+
+# ----------------------------------------------------------------------------------------------
+
+# Python program to find GCD of two numbers
 
 
+# Function to find gcd of two numbers
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+print(gcd(48, 18))
 
