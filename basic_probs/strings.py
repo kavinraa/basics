@@ -68,14 +68,44 @@
 
 # --------------------------------------------------------------------------------------------------
 
-def is_palindrome(s: str) -> bool:
-    # Remove any non-alphanumeric characters and convert to lowercase
-    cleaned_string = ''.join(char.lower() for char in s if char.isalnum())
+# def is_palindrome(s: str) -> bool:
+#     # Remove any non-alphanumeric characters and convert to lowercase
+#     cleaned_string = ''.join(char.lower() for char in s if char.isalnum())
     
-    # Check if the cleaned string is the same forward and backward
-    return cleaned_string == cleaned_string[::-1]
+#     # Check if the cleaned string is the same forward and backward
+#     return cleaned_string == cleaned_string[::-1]
 
-# Example usage:
-test_string = "A man, a plan, a cana"
-result = is_palindrome(test_string)
-print(result)  # Output: True
+# # Example usage:
+# test_string = "A man, a plan, a cana"
+# result = is_palindrome(test_string)
+# print(result)  # Output: True/
+
+# ----------------------------------------------------------------------------------------------
+
+# # To find the number of occurrences of each character in a string and display the count
+# def count(str):
+#     occurance = {}
+#     for char in str:
+#         if char in occurance :
+#             occurance[char] += 1
+#         else :
+#             occurance[char] = 1 
+#     return occurance
+
+# str = str(input("input the string whose number of occurance is to be found : "))
+
+# print(count(str))
+
+# # method 2
+# from collections import Counter
+# def count2(str):
+#     char_count = Counter(str)
+#     # total_occurance of all the chars in the str
+#     total_occurance = sum(char_count.values()) 
+#     return char_count
+    
+# str = (input("input the string whose number of occurance is to be found : "))
+
+# print(count2(str))
+
+# ----------------------------------------------------------------------------------------------

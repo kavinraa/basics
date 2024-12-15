@@ -1,9 +1,20 @@
+# # find even or odd
+# def odd_or_even(n):
+#     if n%2 == 0 :
+#         print(f"{n} is even")
+#     else:
+#         print(f"{n} is odd")
+
+# (odd_or_even(38))
+
+# ----------------------------------------------------------------------------------------------
+
 # # Find the first digit and last digit of a number
 # def firstDigit(n) : 
   
 #     # Remove last digit from number till only one digit is left 
 #     while n >= 10:  
-#         n //= 10; 
+#         n //= 10
       
 #     # return the first digit 
 #     return n
@@ -65,9 +76,8 @@
 # ----------------------------------------------------------------------------------------------
 
 # def power(x,n):
-#     # initialise power = 1
+#     # initialise po = 1
 #     pow = 1
-#     # multiply x for n times
 #     for _ in range(n):
 #         pow *= x
 #     return pow
@@ -98,7 +108,7 @@
 #         i = i + 1
 
 # print ("The divisors of 100 are: ")
-# divisor(10)
+# divisor(100)
 
 # ----------------------------------------------------------------------------------------------
 
@@ -112,14 +122,14 @@
 #     else :
 #         print("Not a prime number")
 
-# check_if_prime_number(11)
+# check_if_prime_number(13)
 
 # ----------------------------------------------------------------------------------------------
 
 # def if_armstrong_number(n):     # sum of the digits raised to the number of digits == original number
-#     # convert number to str for iteration
+#     # convert number to str for iteration 
 #     digits = str(n)
-#     # get the number of digits 
+#     # get the number of digits for power
 #     power = len(digits)
 #     #  get the sum of the number 
 #     # total = sum(int(i) ** power for i in digits)
@@ -138,4 +148,49 @@
 
 # ----------------------------------------------------------------------------------------------
 
+# # Function to check Palindrome
+# def check_palindrome(n):
+#     reverse = 0
+#     # Copy of the original number so that the original number remains unchanged while finding the reverse
+#     temp = n
+#     while temp != 0:
+#         reverse = reverse * 10 + temp % 10
+#         temp = temp // 10
+#     # If reverse is equal to the original number, the
+#     # number is palindrome
+#     return reverse == n
 
+# # Sample Input
+# n = 12321
+# if check_palindrome(n):
+#       print("Yes")
+# else:
+#       print("No")
+
+# # alt method
+# def palindrome(n):
+#     return str(n) == str(n)[::-1]
+
+# print(palindrome(12321))
+
+# ----------------------------------------------------------------------------------------------
+
+# # Python3 program to find floor(sqrt(x)
+
+# # Returns floor of square root of x
+
+
+# def floorSqrt(x):
+#     low = 1
+#     high = x
+#     while (low <= high) :
+#         mid = (low + high) // 2
+#         if (mid * mid) <= x :
+#             low = mid + 1
+#         else :
+#             high = mid - 1
+#     return high
+# x = 10
+# print(floorSqrt(x))
+
+# ----------------------------------------------------------------------------------------------
