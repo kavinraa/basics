@@ -216,23 +216,25 @@
 # print(floorSqrt(56523))
 
 # ----------------------------------------------------------------------------------------------
-# optimized approach
-def perfect_num(x):
-    if x <= 1:
-        return False  # No perfect numbers <= 1
-    # initialize sum = 1, 1 is divisor of all numbers
-    sum = 1
-    max = (x) ** 0.5
-    #  iterate till sqrt of 'x' to find the possible divisors
-    for i in range(2, max + 1) :
-        if x % i == 0 :
-            sum += i
-            if i != x :
-                sum += x/i          
+# # optimized approach
+# def perfect_num(x):
+#     if x <= 1:
+#         return False  # No perfect numbers <= 1
+#     # initialize sum = 1, 1 is divisor of all numbers
+#     sum = 1
+#     max = int((x) ** 0.5)
+#     #  iterate till sqrt of 'x' to find the possible divisors, 
+#     # since after sqrt, the number repeat(commutative property)
+#     for i in range(2, max + 1) :
+#         # check the divisors
+#         if x % i == 0 :
+#             #  check if the number doesn't repeat for perfect square
+#             if i != x / i :
+#                 sum += i + x/i
+#             else :
+#                 sum += i          
 
-    if sum == x :
-        return True
-
+#     return sum == x
 
 # # brute force approach
 # def perfect_num(x):
@@ -244,6 +246,6 @@ def perfect_num(x):
 #     if sum == x :
 #         return True 
 #     else :
-#         return False
+# #         return False
 
-print(perfect_num(6))
+# print(perfect_num(36))
