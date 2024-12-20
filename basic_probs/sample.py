@@ -76,7 +76,7 @@
 # ----------------------------------------------------------------------------------------------
 
 # def power(x,n):
-#     # initialise po = 1
+#     # initialise pow = 1
 #     pow = 1
 #     for _ in range(n):
 #         pow *= x
@@ -167,30 +167,83 @@
 # else:
 #       print("No")
 
-# # alt method
+# # alt method using str manipulation
 # def palindrome(n):
 #     return str(n) == str(n)[::-1]
 
 # print(palindrome(12321))
 
+# # alt method
+# def palindrome(x):
+#     if x < 0 :
+#         return False
+
+#     div = 1
+#     while x >= 10 * div :
+#         div *= 10
+
+#     while x :
+#         right = x % 10
+#         left = x // div
+#         if left != right :
+#             return False
+#         x = (x % div) // 10
+#         div = div / 100
+#     return True
+
+# print(palindrome(12321))
+
 # ----------------------------------------------------------------------------------------------
 
-# # Python3 program to find floor(sqrt(x)
-
-# # Returns floor of square root of x
-
+# # floor(sqrt(x)) using binary search
 
 # def floorSqrt(x):
+#     # determining the lowest and highest floor sqrt num possible
+#     #  low = 1 - the least possible number
+#     #  high = x - the highest possible number
+#     if x == 0 or x == 1 :
+#       return x
 #     low = 1
 #     high = x
-#     while (low <= high) :
-#         mid = (low + high) // 2
-#         if (mid * mid) <= x :
+#     while low <= high :
+#         mid = (high + low) // 2
+#         if mid * mid <= x :
 #             low = mid + 1
 #         else :
 #             high = mid - 1
 #     return high
-# x = 10
-# print(floorSqrt(x))
+
+# print(floorSqrt(56523))
 
 # ----------------------------------------------------------------------------------------------
+# optimized approach
+def perfect_num(x):
+    if x <= 1:
+        return False  # No perfect numbers <= 1
+    # initialize sum = 1, 1 is divisor of all numbers
+    sum = 1
+    max = (x) ** 0.5
+    #  iterate till sqrt of 'x' to find the possible divisors
+    for i in range(2, max + 1) :
+        if x % i == 0 :
+            sum += i
+            if i != x :
+                sum += x/i          
+
+    if sum == x :
+        return True
+
+
+# # brute force approach
+# def perfect_num(x):
+#     max = (x//2) + 1
+#     sum = 0
+#     for i in range(1,max):
+#         if x % i == 0 :
+#             sum += i
+#     if sum == x :
+#         return True 
+#     else :
+#         return False
+
+print(perfect_num(6))
