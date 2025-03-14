@@ -29,41 +29,45 @@
 
 # ------------------------------------------------------------------------------
 
-# Array basics 3:
-# Using the array Module
-import array as arr
+# # Array basics 3:
+# # Using the array Module
+# import array as arr
 
-# Prompt the user for the size of the array
-n = int(input("Enter the number of elements: "))
+# # Prompt the user for the size of the array
+# n = int(input("Enter the number of elements: "))
 
-# Initialize an empty array of integers
-array = arr.array('i', [])
+# # Initialize an empty array of integers
+# array = arr.array('i', [])
 
-# Loop to collect inputs
-for i in range(n):
-    element = int(input(f"Enter element {i + 1}: "))
-    array.append(element)
+# # Loop to collect inputs
+# for i in range(n):
+#     element = int(input(f"Enter element {i + 1}: "))
+#     array.append(element)
 
-# Print the resulting array
-print("Array:", array)
+# # Print the resulting array
+# print("Array:", array)
 
 # ------------------------------------------------------------------------------
 
 # # build arrays from permutation :
 
-def arr(nums):
-    length = len(nums)
-    arr_test = []
-    for i in range(length):
-        arr_test.append(nums[nums[i]])
-    return arr
+# def arr(nums):
+#     # get the length of the input array
+#     n = len(nums)
+#     # check if the input array is within the range of 0 to n-1
+#     if sorted(nums) != list(range(n)):
+#         raise ValueError("the inputa array should be in the range of 0 to n-1")
+    
+#     arr_test = []
+#     for i in range(n):
+#         arr_test.append(nums[nums[i]])
+#     return arr_test
 
-nums=[2,0,3,1]
+# nums=[2,0,3,1]
+# print("Input array:", nums)
 # perm = arr(nums)
 
-
-print("Input array:", nums)
-print("Permutation array:", perm)
+# print("Permutation array:", perm)
 
 # ------------------------------------------------------------------------------
 
@@ -85,27 +89,27 @@ print("Permutation array:", perm)
     
 # ------------------------------------------------------------------------------
 
-# Shuffle the array :
-def shuffle(nums, n):
-    # Initialize an empty list for the result
-    result = []
+# # Shuffle the array :
+# def shuffle(nums, n):
+#     # Initialize an empty list for the result
+#     result = []
 
-    # Loop through the first half and the second half of the array
-    for i in range(n):
-        # Append the element from the first half
-        result.append(nums[i])
-        # Append the corresponding element from the second half
-        result.append(nums[i+n])
+#     # Loop through the first half and the second half of the array
+#     for i in range(n):
+#         # Append the element from the first half
+#         result.append(nums[i])
+#         # Append the corresponding element from the second half
+#         result.append(nums[i+n])
         
-    return result
+#     return result
 
-# Example usage
-nums = [2, 5, 1, 3, 4, 7]
-n = 3
-# shuffled_array = shuffle(nums, n)
+# # Example usage
+# nums = [2, 5, 1, 3, 4, 7]
+# n = 3
+# # shuffled_array = shuffle(nums, n)
 
-print("Input array:", nums)
-print("Shuffled array:", shuffled_array)    
+# print("Input array:", nums)
+# print("Shuffled array:", shuffled_array)    
 
 # ------------------------------------------------------------------------------
 
