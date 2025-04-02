@@ -49,63 +49,40 @@
 # minmx()
 # ------------------------------------------------------------------------------
 
-# # Array Basics 3: Using the array Module
-# import array as arr
+# Array basics 3:
+# Using the array Module
+import array as arr
 
-# # Prompt the user for the size of the array
-# while True:
-#     try:
-#         n = int(input("Enter the number of elements: "))
-#         if n <= 0:
-#             print("Please enter a positive integer.")
-#             continue
-#         break
-#     except ValueError:
-#         print("Invalid input! Please enter a valid number.")
+# Prompt the user for the size of the array
+n = int(input("Enter the number of elements: "))
 
-# # Initialize an empty array of integers
-# array = arr.array('i', [])
+# Initialize an empty array of integers
+array = arr.array('i', [])
 
-# # Loop to collect inputs
-# for i in range(n):
-#     while True:
-#         try:
-#             element = int(input(f"Enter element {i + 1}: "))
-#             array.append(element)
-#             break
-#         except ValueError:
-#             print("Invalid input! Please enter a valid integer.")
+# Loop to collect inputs
+for i in range(n):
+    element = int(input(f"Enter element {i + 1}: "))
+    array.append(element)
 
-# # Print the resulting array
-# print("Array:", list(array))  # Using list() for better formatting
+# Print the resulting array
+print("Array:", array)
 
 # ------------------------------------------------------------------------------
 # # build arrays from permutation :
 
-# def arr(nums):
-#     n = len(nums)
+def arr(nums):
+    length = len(nums)
+    arr_test = []
+    for i in range(length):
+        arr_test.append(nums[nums[i]])
+    return arr
 
-#     # check if the number is a valid permutation
-#     if sorted(nums) != list(range(n)):
-#         raise ValueError("input array must be a valid permuation between 0 to n-1")
-
-#     arr_test = []
-#     for i in range(n):
-#         arr_test.append(nums[nums[i]])
-#     return arr_test
-
-# # Prompt the user for the size of the array
-# n = int(input("Enter the number of elements: "))
-
-# # to get input array 
-# nums = [] 
-# for i in range(n):
-#     element = int(input(f"Enter element {i + 1}: "))
-#     nums.append(element)
-# print("Input array:", nums)
-
+nums=[2,0,3,1]
 # perm = arr(nums)
-# print("Permutation array:", perm)
+
+
+print("Input array:", nums)
+print("Permutation array:", perm)
 
 # ------------------------------------------------------------------------------
 # # running sum of 1-D array
