@@ -49,40 +49,39 @@
 # minmx()
 # ------------------------------------------------------------------------------
 
-# Array basics 3:
-# Using the array Module
-import array as arr
+# # Array basics 3:
+# # Using the array Module
+# import array as arr
 
-# Prompt the user for the size of the array
-n = int(input("Enter the number of elements: "))
+# # Prompt the user for the size of the array
+# n = int(input("Enter the number of elements: "))
 
-# Initialize an empty array of integers
-array = arr.array('i', [])
+# # Initialize an empty array of integers
+# array = arr.array('i', [])
 
-# Loop to collect inputs
-for i in range(n):
-    element = int(input(f"Enter element {i + 1}: "))
-    array.append(element)
+# # Loop to collect inputs
+# for i in range(n):
+#     element = int(input(f"Enter element {i + 1}: "))
+#     array.append(element)
 
-# Print the resulting array
-print("Array:", array)
+# # Print the resulting array
+# print("Array:", array)
 
 # ------------------------------------------------------------------------------
 # # build arrays from permutation :
 
-def arr(nums):
-    length = len(nums)
-    arr_test = []
-    for i in range(length):
-        arr_test.append(nums[nums[i]])
-    return arr
+# def arr(nums):
+#     length = len(nums)
+#     arr_test = []
+#     for i in range(length):
+#         arr_test.append(nums[nums[i]])
+#     return arr_test
 
-nums=[2,0,3,1]
+# nums=[2,1,3,0]
 # perm = arr(nums)
 
-
-print("Input array:", nums)
-print("Permutation array:", perm)
+# print("Input array:", nums)
+# print("permutation array :" , perm)
 
 # ------------------------------------------------------------------------------
 # # running sum of 1-D array
@@ -100,13 +99,24 @@ print("Permutation array:", perm)
 
 # print("Input array:", nums)
 # print("Running sum array:", result)
+
+# # alt method :
+# def test(nums):
+#     for i in range(1,len(nums)):
+#         nums[i] += nums[i-1]
+#     return nums
+
+# nums = [1,1,1,1]
+# print(test(nums))   
     
 # ------------------------------------------------------------------------------
 
 # # Shuffle the array :
-# def shuffle(nums, n):
+# def shuffle(nums):
 #     # Initialize an empty list for the result
 #     result = []
+#     # find after which point x series ends and y series starts
+#     n = len(nums)//2
 
 #     # Loop through the first half and the second half of the array
 #     for i in range(n):
@@ -118,11 +128,33 @@ print("Permutation array:", perm)
 #     return result
 
 # # Example usage
-# nums = [2, 5, 1, 3, 4, 7]
-# n = 3
-# # shuffled_array = shuffle(nums, n)
+# nums = [2,1,3,4]
+# shuffled_array = shuffle(nums)
 
 # print("Input array:", nums)
 # print("Shuffled array:", shuffled_array)    
 
 # ------------------------------------------------------------------------------ 
+# def conc_array(nums):
+#     ans = nums + nums
+#     return ans
+
+# nums = [1,2,1]
+# print(conc_array(nums))
+
+# # alt method :
+# def test(nums):
+#     n = len(nums)
+#     ans = (2*n) * [0]
+#     for i in range(n):
+#         ans[i] = nums[i]
+#         ans[i+n] = nums[i]
+#     return ans
+
+# nums = [1,2,1]
+# print(test(nums))
+
+# ------------------------------------------------------------------------------ 
+
+
+
